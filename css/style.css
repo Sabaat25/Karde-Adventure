@@ -322,6 +322,31 @@ img {
    MOBILE RESPONSIVE DESIGN FRAMEWORK
    ======================================== */
 
+/* Navigation Mobile Fixes */
+@media (max-width: 768px) {
+    nav {
+        padding: 0.5rem 0;
+    }
+    
+    nav .max-w-7xl {
+        padding: 0.5rem;
+    }
+    
+    /* Remove extra spacing in nav */
+    .h-16 {
+        height: 3.5rem;
+    }
+    
+    /* Hide desktop elements on mobile */
+    .hidden.md\:flex {
+        display: none;
+    }
+    
+    .hidden.md\:inline {
+        display: none !important;
+    }
+}
+
 /* Tablet & Mobile Devices (768px and below) */
 @media (max-width: 768px) {
     body {
