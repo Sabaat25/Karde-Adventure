@@ -324,12 +324,45 @@ img {
 
 /* Navigation Mobile Fixes */
 @media (max-width: 768px) {
+    /* Navigation bar fixes */
     nav {
         padding: 0.5rem 0;
     }
     
     nav .max-w-7xl {
+        padding: 0 0.5rem;
+    }
+    
+    /* Navbar flex container */
+    .flex.justify-between.items-center.h-16 {
+        height: auto;
+        padding: 0.5rem 0;
+    }
+    
+    /* Logo container - flex shrink to allow hamburger room */
+    nav .flex.items-center.space-x-2 {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    /* Logo text responsive */
+    nav span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.875rem;
+    }
+    
+    /* Mobile menu button - always visible and on right */
+    #mobile-menu-btn {
+        flex-shrink: 0;
+        margin-left: auto;
         padding: 0.5rem;
+        min-width: 44px;
+        min-height: 44px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
     }
     
     /* Remove extra spacing in nav */
@@ -339,11 +372,26 @@ img {
     
     /* Hide desktop elements on mobile */
     .hidden.md\:flex {
-        display: none;
+        display: none !important;
     }
     
     .hidden.md\:inline {
         display: none !important;
+    }
+}
+
+/* Extra small devices - further optimize */
+@media (max-width: 480px) {
+    nav span {
+        font-size: 0.75rem;
+    }
+    
+    nav .flex.items-center.space-x-2 {
+        gap: 0.5rem !important;
+    }
+    
+    nav img {
+        max-width: 36px;
     }
 }
 
