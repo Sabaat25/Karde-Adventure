@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Karde Beach Water Sports - Adventure Awaits</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,13 +12,12 @@
     <!-- Navigation Bar -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <div class="flex items-center h-14 sm:h-16">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3 min-w-0 flex-shrink">
-                    <img src="images/logo.png" alt="KAS Logo" class="h-9 sm:h-11 w-auto flex-shrink-0">
-                    <span class="text-base sm:text-lg lg:text-xl font-bold text-gray-800 whitespace-nowrap overflow-hidden text-overflow-ellipsis">Karde Beach</span>
+            <div class="flex items-center h-14 sm:h-16 relative w-full">
+                <!-- Centered Logo for mobile, left for desktop -->
+                <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:static md:translate-x-0 md:translate-y-0 flex justify-center md:justify-start items-center w-full md:w-auto">
+                    <img src="images/logo.png" alt="KAS Logo" class="h-9 sm:h-11 w-auto flex-shrink-0 mx-auto">
+                    <span class="hidden md:inline text-base sm:text-lg lg:text-xl font-bold text-gray-800 whitespace-nowrap overflow-hidden text-overflow-ellipsis ml-2">Karde Beach</span>
                 </div>
-
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex flex-1 justify-center items-center space-x-6">
                     <a href="index.html" class="text-gray-800 hover:text-blue-600 font-medium transition px-3 py-2 rounded-md hover:bg-blue-50">Home</a>
@@ -27,23 +26,22 @@
                     <a href="pages/gallery.html" class="text-gray-800 hover:text-blue-600 font-medium transition px-3 py-2 rounded-md hover:bg-blue-50">Gallery</a>
                     <a href="pages/contact.html" class="text-gray-800 hover:text-blue-600 font-medium transition px-3 py-2 rounded-md hover:bg-blue-50">Contact</a>
                 </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="flex-1 flex justify-end md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-800 text-2xl flex-shrink-0 p-2 rounded-md hover:bg-gray-100">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
+                <!-- Hamburger Button on right for mobile -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-800 text-2xl flex-shrink-0 p-2 rounded-md hover:bg-gray-100 absolute right-4 top-1/2 -translate-y-1/2 z-20">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 py-3">
-            <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded">Home</a>
-            <a href="pages/about.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded">About</a>
-            <a href="pages/services.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded">Services</a>
-            <a href="pages/gallery.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded">Gallery</a>
-            <a href="pages/contact.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-black bg-opacity-40 z-30 flex flex-col items-center justify-start pt-24 animate-fade-in-up">
+            <div class="bg-white w-11/12 max-w-xs rounded-2xl shadow-2xl p-6 flex flex-col gap-4">
+                <a href="index.html" class="block px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded text-lg font-semibold">Home</a>
+                <a href="pages/about.html" class="block px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded text-lg font-semibold">About</a>
+                <a href="pages/services.html" class="block px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded text-lg font-semibold">Services</a>
+                <a href="pages/gallery.html" class="block px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded text-lg font-semibold">Gallery</a>
+                <a href="pages/contact.html" class="block px-4 py-3 text-gray-800 hover:bg-blue-50 hover:text-blue-600 rounded text-lg font-semibold">Contact</a>
+            </div>
         </div>
     </nav>
 
